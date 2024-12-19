@@ -153,7 +153,7 @@ class HomingBeam(pg.sprite.Sprite):
         if self.rect.colliderect(self.target.rect):
             self.kill()
 
-        if time.time() - self.spawn_time > 5:
+        if time.time() - self.spawn_time > 3:
             self.kill()
         # 画面外に出たら削除
         if not check_bound(self.rect):
